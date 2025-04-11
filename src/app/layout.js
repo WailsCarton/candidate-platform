@@ -1,4 +1,4 @@
-import '@/styles/globals.css';
+import './globals.css';
 import '@/i18n';
 import { ConfigProvider } from 'antd';
 import StoreProvider from '@/providers/StoreProvider';

@@ -2,6 +2,7 @@
 
 import { Card } from 'antd';
 import { useRouter } from 'next/navigation';
+import styles from './CandidateCard.module.css';
 
 export default function CandidateCard({ candidate, index }) {
   const router = useRouter();
@@ -9,12 +10,14 @@ export default function CandidateCard({ candidate, index }) {
   return (
     <Card
       hoverable
-      style={{ marginBottom: '1rem' }}
+      className={styles.card}
       onClick={() => router.push(`/recruteur/${index}`)}
     >
-      <h3>{candidate.prenom} {candidate.nom}</h3>
-      <p>Email : {candidate.email}</p>
-      <p>Compétences : {candidate.competences}</p>
+      <h3 className={styles.title}>
+        {candidate.prenom} {candidate.nom}
+      </h3>
+      <p className={styles.text}>Email : {candidate.email}</p>
+      <p className={styles.text}>Compétences : {candidate.competences}</p>
     </Card>
   );
 }

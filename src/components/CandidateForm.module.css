@@ -1,0 +1,18 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+  
+  .uploadButton {
+    font-weight: 500;
+  }
+  
+  .submitButton {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  

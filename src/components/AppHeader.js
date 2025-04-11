@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import { Layout, Typography, Menu, Dropdown } from 'antd';
+import { Layout, Typography, Menu, Dropdown, Space } from 'antd';
 import { usePathname } from 'next/navigation';
+import styles from './AppHeader.module.css';
 
 const { Header } = Layout;
 
@@ -14,34 +15,33 @@ export default function AppHeader() {
   if (pathname === '/') return null;
 
   const languageItems = [
-    { key: 'fr', label: 'Français' },
-    { key: 'en', label: 'English' },
-    { key: 'es', label: 'Español' },
-    { key: 'de', label: 'Deutsch' }
+    { key: 'fr', label: <Space>🇫🇷 Français</Space> },
+    { key: 'en', label: <Space>🇬🇧 English</Space> },
+    { key: 'es', label: <Space>🇪🇸 Español</Space> },
+    { key: 'de', label: <Space>🇩🇪 Deutsch</Space> },
   ];
 
   const handleLanguageChange = ({ key }) => {
     i18n.changeLanguage(key);
   };
 
+  const currentLang = i18n.language;
+
+  const flag = {
+    fr: '🇫🇷',
+    en: '🇬🇧',
+    es: '🇪🇸',
+    de: '🇩🇪',
+  }[currentLang] || '🌐';
+
   return (
-    <Header
-      style={{
-        backgroundColor: '#fff',
-        borderBottom: '1px solid #f0f0f0',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '0 2rem',
-        height: 64,
-      }}
-    >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+    <Header className={styles.header}>
+      <div className={styles.left}>
         <Typography.Title level={4} style={{ margin: 0 }}>
           <Link href="/" style={{ color: '#1677ff' }}>{t('site_title')}</Link>
         </Typography.Title>
 
-        <nav style={{ display: 'flex', gap: '1rem' }}>
+        <nav className={styles.nav}>
           <Link href="/candidat">{t('btn_candidate')}</Link>
           <Link href="/recruteur">{t('btn_recruiter')}</Link>
         </nav>
@@ -52,8 +52,8 @@ export default function AppHeader() {
         placement="bottomRight"
         arrow
       >
-        <a style={{ cursor: 'pointer', color: '#1677ff' }}>
-          {i18n.language.toUpperCase()}
+        <a className={styles.langBtn}>
+          {flag} {currentLang.toUpperCase()}
         </a>
       </Dropdown>
     </Header>

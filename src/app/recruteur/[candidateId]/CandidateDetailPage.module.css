@@ -1,0 +1,13 @@
+.container {
+    padding: 2rem;
+  }
+  
+  .detailCard {
+    margin-top: 1rem;
+  }
+  
+  .downloadButton {
+    padding: 0;
+    font-weight: 500;
+  }
+  

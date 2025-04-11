@@ -6,23 +6,23 @@ import { UploadOutlined } from '@ant-design/icons';
 import { useAppDispatch } from '@/store/hooks';
 import { addCandidate } from '@/store/candidateSlice';
 import { useRouter } from 'next/navigation';
+import styles from './CandidateForm.module.css';
 
 export default function CandidateForm() {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const { t } = useTranslation();
 
-  const normFile = (e) => {
-    return Array.isArray(e) ? e : e?.fileList;
-  };
+  const normFile = (e) => Array.isArray(e) ? e : e?.fileList;
 
   const onFinish = (values) => {
     dispatch(addCandidate(values));
     message.success(t('success_message'));
+    router.push('/recruteur');
   };
 
   return (
-    <Form layout="vertical" onFinish={onFinish} style={{ maxWidth: 600, margin: '0 auto' }}>
+    <Form layout="vertical" onFinish={onFinish} className={styles.container}>
       <Form.Item
         label={t('label_nom')}
         name="nom"
@@ -66,7 +66,9 @@ export default function CandidateForm() {
           accept="application/pdf"
           maxCount={1}
         >
-          <Button icon={<UploadOutlined />}>{t('upload_button')}</Button>
+          <Button icon={<UploadOutlined />} className={styles.uploadButton}>
+            {t('upload_button')}
+          </Button>
         </Upload>
       </Form.Item>
 
@@ -81,12 +83,14 @@ export default function CandidateForm() {
           accept="application/pdf"
           maxCount={1}
         >
-          <Button icon={<UploadOutlined />}>{t('upload_button')}</Button>
+          <Button icon={<UploadOutlined />} className={styles.uploadButton}>
+            {t('upload_button')}
+          </Button>
         </Upload>
       </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" className={styles.submitButton}>
           {t('submit_button')}
         </Button>
       </Form.Item>
