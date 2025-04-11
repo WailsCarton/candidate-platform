@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
 import { Form, Input, Button, message, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { useAppDispatch } from '@/store/hooks';
@@ -9,16 +10,18 @@ import { useRouter } from 'next/navigation';
 export default function CandidateForm() {
   const dispatch = useAppDispatch();
   const router = useRouter();
+  const { t } = useTranslation();
+  
 
   const onFinish = (values) => {
     dispatch(addCandidate(values));
-    message.success('Candidat enregistré avec succès !');
+    message.success(t('success_message'));
   };
 
   return (
     <Form layout="vertical" onFinish={onFinish} style={{ maxWidth: 600, margin: '0 auto' }}>
       <Form.Item
-        label="Nom"
+        label={t('label_nom')}
         name="nom"
         rules={[{ required: true, message: 'Veuillez entrer votre nom' }]}
       >
@@ -26,7 +29,7 @@ export default function CandidateForm() {
       </Form.Item>
 
       <Form.Item
-        label="Prénom"
+        label={t('label_prenom')}
         name="prenom"
         rules={[{ required: true, message: 'Veuillez entrer votre prénom' }]}
       >
@@ -34,7 +37,7 @@ export default function CandidateForm() {
       </Form.Item>
 
       <Form.Item
-        label="Email"
+        label={t('label_email')}
         name="email"
         rules={[{ required: true, type: 'email', message: 'Veuillez entrer un email valide' }]}
       >
@@ -42,7 +45,7 @@ export default function CandidateForm() {
       </Form.Item>
 
       <Form.Item
-        label="Compétences"
+        label={t('label_competences')}
         name="competences"
         rules={[{ required: true, message: 'Veuillez entrer vos compétences' }]}
       >
@@ -50,7 +53,7 @@ export default function CandidateForm() {
       </Form.Item>
 
       <Form.Item
-        label="CV (PDF)"
+        label={t('label_cv')}
         name="cv"
         valuePropName="fileList"
         getValueFromEvent={e => Array.isArray(e) ? e : e?.fileList}
@@ -61,19 +64,19 @@ export default function CandidateForm() {
       </Form.Item>
 
       <Form.Item
-        label="Lettre de motivation (PDF)"
+        label={t('label_lettre')}
         name="lettre"
         valuePropName="fileList"
         getValueFromEvent={e => Array.isArray(e) ? e : e?.fileList}
       >
         <Upload beforeUpload={() => false} accept="application/pdf">
-          <Button icon={<UploadOutlined />}>Choisir un fichier</Button>
+          <Button icon={<UploadOutlined />}>{t('upload_button')}</Button>
         </Upload>
       </Form.Item>
 
       <Form.Item>
         <Button type="primary" htmlType="submit">
-          Envoyer la candidature
+          {t('submit_button')}
         </Button>
       </Form.Item>
     </Form>

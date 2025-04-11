@@ -1,6 +1,24 @@
 {
-    "title_home": "Bienvenue sur la plateforme",
-    "btn_candidate": "Je suis un candidat",
-    "btn_recruiter": "Je suis un recruteur"
-  }
-  
+  "title_home": "Bienvenue sur la plateforme",
+  "btn_candidate": "Je suis un candidat",
+  "btn_recruiter": "Je suis un recruteur",
+
+  "candidate_form_title": "Formulaire de candidature",
+  "welcome_candidate_page": "Bienvenue sur la page dédiée aux candidats.", 
+  "label_nom": "Nom",
+  "label_prenom": "Prénom",
+  "label_email": "Email",
+  "label_competences": "Compétences",
+  "label_cv": "CV (PDF)",
+  "label_lettre": "Lettre de motivation (PDF)",
+  "submit_button": "Envoyer la candidature",
+  "upload_button": "Choisir un fichier",
+  "success_message": "Candidat enregistré avec succès !",
+
+  "recruiter_list_title": "Liste des candidats",
+  "no_candidates": "Aucun candidat enregistré pour le moment.",
+  "details_title": "Détails du candidat",
+  "label_cv_name": "CV",
+  "label_lettre_name": "Lettre de motivation",
+  "not_found": "Candidat introuvable."
+}

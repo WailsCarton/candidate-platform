@@ -1,6 +1,23 @@
 {
-    "title_home": "Welcome to the platform",
-    "btn_candidate": "I am a candidate",
-    "btn_recruiter": "I am a recruiter"
-  }
-  
+  "title_home": "Welcome to the platform",
+  "btn_candidate": "I am a candidate",
+  "btn_recruiter": "I am a recruiter",
+
+  "candidate_form_title": "Candidate Application Form",
+  "welcome_candidate_page": "Welcome to the candidate page.",
+  "label_nom": "Last Name",
+  "label_prenom": "First Name",
+  "label_email": "Email",
+  "label_competences": "Skills",
+  "label_cv": "Resume (PDF)",
+  "label_lettre": "Cover Letter (PDF)",
+  "submit_button": "Submit Application",
+  "success_message": "Candidate successfully saved!",
+
+  "recruiter_list_title": "Candidate List",
+  "no_candidates": "No candidates registered yet.",
+  "details_title": "Candidate Details",
+  "label_cv_name": "Resume",
+  "label_lettre_name": "Cover Letter",
+  "not_found": "Candidate not found."
+}
