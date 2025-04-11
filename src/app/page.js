@@ -3,14 +3,15 @@
 import { useTranslation } from 'react-i18next';
 import { Button, Space, Typography } from 'antd';
 import { useRouter } from 'next/navigation';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function HomePage() {
-  const { t, i18n } = useTranslation();
   const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <div style={{ padding: '3rem', textAlign: 'center' }}>
-      <Typography.Title level={2}>{t('title_home')}</Typography.Title>
+    <Typography.Title level={2}>{t('title_home')}</Typography.Title>
 
       <Space direction="vertical" size="large" style={{ marginTop: '2rem' }}>
         <Button type="primary" size="large" onClick={() => router.push('/candidat')}>
@@ -21,14 +22,9 @@ export default function HomePage() {
         </Button>
       </Space>
 
-      <div style={{ marginTop: '2rem' }}>
-        <Button onClick={() => i18n.changeLanguage('fr')} style={{ marginRight: '1rem' }}>
-          FR
-        </Button>
-        <Button onClick={() => i18n.changeLanguage('en')}>
-          EN
-        </Button>
-      </div>
+      <LanguageSwitcher/>
+
+    
     </div>
   );
 }
