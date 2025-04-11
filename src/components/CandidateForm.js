@@ -11,7 +11,10 @@ export default function CandidateForm() {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const { t } = useTranslation();
-  
+
+  const normFile = (e) => {
+    return Array.isArray(e) ? e : e?.fileList;
+  };
 
   const onFinish = (values) => {
     dispatch(addCandidate(values));
@@ -23,7 +26,7 @@ export default function CandidateForm() {
       <Form.Item
         label={t('label_nom')}
         name="nom"
-        rules={[{ required: true, message: 'Veuillez entrer votre nom' }]}
+        rules={[{ required: true, message: t('label_nom') + ' ?' }]}
       >
         <Input />
       </Form.Item>
@@ -31,7 +34,7 @@ export default function CandidateForm() {
       <Form.Item
         label={t('label_prenom')}
         name="prenom"
-        rules={[{ required: true, message: 'Veuillez entrer votre prénom' }]}
+        rules={[{ required: true, message: t('label_prenom') + ' ?' }]}
       >
         <Input />
       </Form.Item>
@@ -39,7 +42,7 @@ export default function CandidateForm() {
       <Form.Item
         label={t('label_email')}
         name="email"
-        rules={[{ required: true, type: 'email', message: 'Veuillez entrer un email valide' }]}
+        rules={[{ required: true, type: 'email', message: t('label_email') + ' ?' }]}
       >
         <Input />
       </Form.Item>
@@ -47,7 +50,7 @@ export default function CandidateForm() {
       <Form.Item
         label={t('label_competences')}
         name="competences"
-        rules={[{ required: true, message: 'Veuillez entrer vos compétences' }]}
+        rules={[{ required: true, message: t('label_competences') + ' ?' }]}
       >
         <Input.TextArea rows={4} placeholder="Ex: React, Node.js, SQL..." />
       </Form.Item>
@@ -56,10 +59,14 @@ export default function CandidateForm() {
         label={t('label_cv')}
         name="cv"
         valuePropName="fileList"
-        getValueFromEvent={e => Array.isArray(e) ? e : e?.fileList}
+        getValueFromEvent={normFile}
       >
-        <Upload beforeUpload={() => false} accept="application/pdf">
-          <Button icon={<UploadOutlined />}>Choisir un fichier</Button>
+        <Upload
+          beforeUpload={() => false}
+          accept="application/pdf"
+          maxCount={1}
+        >
+          <Button icon={<UploadOutlined />}>{t('upload_button')}</Button>
         </Upload>
       </Form.Item>
 
@@ -67,9 +74,13 @@ export default function CandidateForm() {
         label={t('label_lettre')}
         name="lettre"
         valuePropName="fileList"
-        getValueFromEvent={e => Array.isArray(e) ? e : e?.fileList}
+        getValueFromEvent={normFile}
       >
-        <Upload beforeUpload={() => false} accept="application/pdf">
+        <Upload
+          beforeUpload={() => false}
+          accept="application/pdf"
+          maxCount={1}
+        >
           <Button icon={<UploadOutlined />}>{t('upload_button')}</Button>
         </Upload>
       </Form.Item>
