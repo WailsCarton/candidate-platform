@@ -6,9 +6,9 @@ import { useRouter } from 'next/navigation';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function HomePage() {
-  const router = useRouter();
-  const { t } = useTranslation();
-
+    const { t } = useTranslation();
+    const router = useRouter();
+    
   return (
     <div style={{ padding: '3rem', textAlign: 'center' }}>
     <Typography.Title level={2}>{t('title_home')}</Typography.Title>
@@ -24,7 +24,6 @@ export default function HomePage() {
 
       <LanguageSwitcher/>
 
-    
     </div>
   );
 }

@@ -1,10 +1,11 @@
 'use client';
 
-import { Button } from 'antd';
+import '@/i18n';
 import { useTranslation } from 'react-i18next';
+import { Button } from 'antd';
 
 export default function LanguageSwitcher() {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();    
 
   return (
     

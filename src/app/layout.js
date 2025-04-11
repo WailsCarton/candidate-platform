@@ -1,7 +1,8 @@
 import '@/styles/globals.css';
 import '@/i18n';
 import { ConfigProvider } from 'antd';
-import StoreProvider from '@/store/StoreProvider';
+import StoreProvider from '@/providers/StoreProvider';
+
 
 export const metadata = {
   title: 'Candidate Platform | Candidatures et Recrutement',
