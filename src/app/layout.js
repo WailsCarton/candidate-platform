@@ -2,6 +2,10 @@ import '@/styles/globals.css';
 import '@/i18n';
 import { ConfigProvider } from 'antd';
 import StoreProvider from '@/providers/StoreProvider';
+import Layout from 'antd/es/layout/layout';
+import AppHeader from '@/components/AppHeader';
+
+const Content = Layout;
 
 
 export const metadata = {
@@ -16,7 +20,12 @@ export default function RootLayout({ children }) {
       <body>
         <StoreProvider>
           <ConfigProvider>
-            {children}
+            <Layout>
+              <AppHeader/>
+              <Content style={{ padding: '2rem' }}>
+                {children}
+              </Content>
+            </Layout>
           </ConfigProvider>
         </StoreProvider>
       </body>
