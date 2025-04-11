@@ -1,56 +1,99 @@
-# Candidate Platform
 
-Ce projet est une application frontend développée avec Next.js 14.  
-Elle permet aux **candidats** de remplir un formulaire et aux **recruteurs** de consulter une liste de candidats ainsi que le détail de chaque profil.
+# 💼 Candidate Platform
 
-## Technologies utilisées
+Plateforme web simple de gestion de candidatures, développée avec **Next.js 14**, **Ant Design**, **Redux Toolkit** et **i18next**.  
+Ce projet permet aux candidats de postuler via un formulaire et aux recruteurs de visualiser les candidatures seulement en local sans Base de Données.
 
-- Next.js 14 (App Router)
-- Ant Design
-- Redux Toolkit
-- React-i18next
-- ESLint
+---
 
-## Installation
+## 🚀 Fonctionnalités
 
-```bash
-git clone https://github.com/WailsCarton/candidate-platform.git
-cd candidate-platform
-npm install
-```
+### 👤 Côté Candidat
+- Formulaire de candidature avec :
+  - Informations personnelles
+  - Compétences
+  - Upload de CV et lettre de motivation (PDF)
+- Multilingue (🇫🇷 🇬🇧 🇩🇪 🇪🇸)
+- Validation de formulaire avec Ant Design
 
-## Lancement
+### 🕵️‍♂️ Côté Recruteur
+- Liste des candidats sous forme de cartes cliquables
+- Détails du candidat avec téléchargement des fichiers envoyés
 
-```bash
-npm run dev
-```
+---
 
-Rendez-vous ensuite sur [http://localhost:3000](http://localhost:3000)
+## 🧱 Stack technique
 
-## Pages
+- **Next.js 14** (App Router)
+- **Redux Toolkit** (gestion du state)
+- **Ant Design** (UI components)
+- **i18next** + `react-i18next` (traductions)
+- **CSS Modules** (styles propres et localisés)
 
-- `/` → Page d’accueil avec deux boutons (Candidat / Recruteur)
-- `/candidat` → Formulaire de candidature
-- `/recruteur` → Liste des candidats
-- `/recruteur/[candidateId]` → Détails d’un candidat
+---
 
-## Organisation
+## 🗂️ Structure du projet
 
 ```
 src/
 ├── app/
-│   ├── layout.js
-│   ├── page.js
-│   ├── candidat/page.js
-│   ├── recruteur/page.js
-│   └── recruteur/[candidateId]/page.js
-├── components/
-├── store/
-├── i18n/
-├── styles/
+│   ├── candidat/                    # Page du formulaire candidat
+│   ├── recruteur/                  # Liste & détails des candidats
+│   ├── layout.js                   # Layout global
+│   ├── page.js                     # Page d'accueil
+│
+├── components/                     # Composants réutilisables
+│
+├── store/                          # Redux (slice, store, hooks)
+│
+├── providers/                      # StoreProvider
+│
+├── i18n/                           # Fichiers de traduction
+│
+├── diagrams/                       # Diagrammes UML
 ```
 
-## Remarques
+---
 
-- Les données sont stockées avec Redux (pas de base de données).
-- L’application est multilingue (FR / EN).
+## 🌐 Langues supportées
+
+- 🇫🇷 Français
+- 🇬🇧 English
+- 🇩🇪 Deutsch
+- 🇪🇸 Español
+
+Sélecteur de langue intégré dans le `Header`.
+
+---
+
+## 🧪 Lancer le projet en local
+
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/WailsCarton/candidate-platform.git
+cd candidate-platform
+
+# 2. Installer les dépendances
+npm install
+
+# 3. Lancer le serveur de développement
+npm run dev
+
+```
+
+Ensuite va sur [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧩 Diagramme UML
+
+📄 Voir `/diagrams/uml-candidate-platform.drawio` pour la structure des composants.  
+Inclut les relations entre :
+- Recruteur
+- Candidature
+- Candidat
+---
+
+## 📎 Auteur
+
+Développé par **Regan S.** – dans le cadre d’un test technique Frontend.
