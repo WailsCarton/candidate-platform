@@ -1,16 +1,22 @@
+import StoreProvider from '@/store/StoreProvider';
+import { ConfigProvider } from 'antd';
 import '@/styles/globals.css';
-import React from 'react';
 
 export const metadata = {
-    title: 'Plateforme de candidature',
-    desciption: 'Plateforme de candidature et de gestion des candidats',
-
+  title: 'Candidate Platform',
+  description: 'Plateforme de recrutement',
 };
 
 export default function RootLayout({ children }) {
-    return (
-      <html lang="fr">
-        <body>{children}</body>
-      </html>
-    );
-  }
+  return (
+    <html lang="fr">
+      <body>
+        <StoreProvider>
+          <ConfigProvider>
+            {children}
+          </ConfigProvider>
+        </StoreProvider>
+      </body>
+    </html>
+  );
+}
