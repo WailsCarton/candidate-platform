@@ -1,0 +1,27 @@
+{
+    "site_title": "Bewerbungsplattform",
+    "title": "Kandidaten-Plattform",
+    "title_home": "Willkommen auf der Plattform",
+    "btn_candidate": "Ich bin ein Kandidat",
+    "btn_recruiter": "Ich bin ein Recruiter",
+  
+    "candidate_form_title": "Bewerbungsformular",
+    "welcome_candidate_page": "Willkommen auf der Kandidatenseite.",
+    "label_nom": "Nachname",
+    "label_prenom": "Vorname",
+    "label_email": "E-Mail",
+    "label_competences": "Fähigkeiten",
+    "label_cv": "Lebenslauf (PDF)",
+    "label_lettre": "Motivationsschreiben (PDF)",
+    "submit_button": "Bewerbung absenden",
+    "upload_button": "Datei auswählen",
+    "success_message": "Kandidat erfolgreich registriert!",
+  
+    "recruiter_list_title": "Liste der Kandidaten",
+    "no_candidates": "Derzeit keine registrierten Kandidaten.",
+    "details_title": "Kandidatendetails",
+    "label_cv_name": "Lebenslauf",
+    "label_lettre_name": "Motivationsschreiben",
+    "not_found": "Kandidat nicht gefunden."
+  }
+  

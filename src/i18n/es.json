@@ -1,0 +1,27 @@
+{
+    "site_title": "Plataforma de candidatura",
+    "title": "Candidate-Plataforma",
+    "title_home": "Bienvenido a la plataforma",
+    "btn_candidate": "Soy un candidato",
+    "btn_recruiter": "Soy un reclutador",
+  
+    "candidate_form_title": "Formulario de candidatura",
+    "welcome_candidate_page": "Bienvenido a la página para candidatos.",
+    "label_nom": "Apellido",
+    "label_prenom": "Nombre",
+    "label_email": "Correo electrónico",
+    "label_competences": "Competencias",
+    "label_cv": "CV (PDF)",
+    "label_lettre": "Carta de motivación (PDF)",
+    "submit_button": "Enviar candidatura",
+    "upload_button": "Elegir un archivo",
+    "success_message": "¡Candidato registrado con éxito!",
+  
+    "recruiter_list_title": "Lista de candidatos",
+    "no_candidates": "No hay candidatos registrados por el momento.",
+    "details_title": "Detalles del candidato",
+    "label_cv_name": "CV",
+    "label_lettre_name": "Carta de motivación",
+    "not_found": "Candidato no encontrado."
+  }
+  
