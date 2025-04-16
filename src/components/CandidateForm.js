@@ -3,13 +3,13 @@
 import { useTranslation } from 'react-i18next';
 import { Form, Input, Button, message, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
-import { useAppDispatch } from '@/store/hooks';
 import { addCandidate } from '@/store/candidateSlice';
 import { useRouter } from 'next/navigation';
 import styles from './CandidateForm.module.css';
+import { useDispatch } from 'react-redux';
 
 export default function CandidateForm() {
-  const dispatch = useAppDispatch();
+  const dispatch = useDispatch();
   const router = useRouter();
   const { t } = useTranslation();
 
@@ -18,7 +18,6 @@ export default function CandidateForm() {
   const onFinish = (values) => {
     dispatch(addCandidate(values));
     message.success(t('success_message'));
-    router.push('/recruteur');
   };
 
   return (

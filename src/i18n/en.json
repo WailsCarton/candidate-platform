@@ -1,8 +1,10 @@
 {
   "site_title": "Application Platform",
+  "title": "Candidate-Plataform",
   "title_home": "Welcome to the platform",
   "btn_candidate": "I am a candidate",
   "btn_recruiter": "I am a recruiter",
+  "btn_projects": "View projects",
 
   "candidate_form_title": "Candidate Application Form",
   "welcome_candidate_page": "Welcome to the candidate page.",
@@ -20,5 +22,17 @@
   "details_title": "Candidate Details",
   "label_cv_name": "Resume",
   "label_lettre_name": "Cover Letter",
-  "not_found": "Candidate not found."
+  "not_found": "Candidate not found.",
+
+  "projects_table": "Project list",
+  "no_projects": "No project recorded yet.",
+  "column_title": "Title",
+  "column_partner": "Partner",
+  "column_date": "Date",
+  "column_learners": "Learners",
+  "column_status": "Status",
+  "apprenants_empty": "No learner"
+
+
+  
 }

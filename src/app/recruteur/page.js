@@ -2,13 +2,13 @@
 
 import '@/i18n';
 import { Typography } from 'antd';
-import { useAppSelector } from '@/store/hooks';
 import CandidateCard from '@/components/CandidateCard';
 import { useTranslation } from 'react-i18next';
 import styles from './RecruteurPage.module.css';
+import { useSelector } from 'react-redux';
 
 export default function RecruteurPage() {
-  const candidats = useAppSelector((state) => state.candidate.list);
+  const candidats = useSelector((state) => state.candidate.list);
   const { t } = useTranslation();
 
   return (

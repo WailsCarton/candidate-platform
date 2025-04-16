@@ -1,9 +1,11 @@
 {
   "site_title": "Plateforme de candidature",
-  "title": "Candidate-Plateforme",
+  "title": "Candidat-Plateforme",
   "title_home": "Bienvenue sur la plateforme",
   "btn_candidate": "Je suis un candidat",
   "btn_recruiter": "Je suis un recruteur",
+  "btn_projects": "Voir les projets",
+
 
   "candidate_form_title": "Formulaire de candidature",
   "welcome_candidate_page": "Bienvenue sur la page dédiée aux candidats.", 
@@ -22,5 +24,15 @@
   "details_title": "Détails du candidat",
   "label_cv_name": "CV",
   "label_lettre_name": "Lettre de motivation",
-  "not_found": "Candidat introuvable."
+  "not_found": "Candidat introuvable.",
+
+  "projects_table": "Liste des projets",
+  "no_projects": "Aucun projet enregistré pour le moment.",
+  "column_title": "Intitulé",
+  "column_partner": "Partenaire",
+  "column_date": "Date",
+  "column_learners": "Apprenants",
+  "column_status": "Statut",
+  "apprenants_empty": "Aucun apprenant"
+
 }

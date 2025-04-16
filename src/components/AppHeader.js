@@ -44,6 +44,7 @@ export default function AppHeader() {
         <nav className={styles.nav}>
           <Link href="/candidat">{t('btn_candidate')}</Link>
           <Link href="/recruteur">{t('btn_recruiter')}</Link>
+          <Link href="/projets">{t('btn_projects')}</Link>
         </nav>
       </div>
 
