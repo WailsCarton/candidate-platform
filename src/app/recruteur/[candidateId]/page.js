@@ -1,9 +1,9 @@
 'use client';
 
-import { useAppSelector } from '@/store/hooks';
 import { useParams } from 'next/navigation';
 import { Card, Typography, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import styles from './CandidateDetailPage.module.css';
 
 export default function CandidateDetailPage() {
@@ -17,7 +17,7 @@ export default function CandidateDetailPage() {
   };
 
   const { candidateId } = useParams();
-  const candidats = useAppSelector((state) => state.candidate.list);
+  const candidats = useSelector((state) => state.candidate.list);
   const { t } = useTranslation();
 
   const candidat = candidats[candidateId];
