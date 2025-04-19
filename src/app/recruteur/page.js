@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import '@/i18n';
 import { Typography } from 'antd';
@@ -8,7 +9,7 @@ import styles from './RecruteurPage.module.css';
 import { useSelector } from 'react-redux';
 
 export default function RecruteurPage() {
-  const candidats = useSelector((state) => state.candidate.list);
+  const candidats = useSelector((state) => state?.candidate?.list || []);
   const { t } = useTranslation();
 
   return (

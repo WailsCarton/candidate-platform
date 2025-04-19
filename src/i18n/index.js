@@ -25,6 +25,9 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    react: {
+      useSuspense: false, // SUPER important pour App Router
+    },
   });
 
 export default i18n;

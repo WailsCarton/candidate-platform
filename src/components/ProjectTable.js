@@ -1,5 +1,6 @@
 'use client';
 
+import '@/i18n';
 import { Table, Tag, Button } from 'antd';
 import { EyeOutlined } from '@ant-design/icons';
 import { useState } from 'react';

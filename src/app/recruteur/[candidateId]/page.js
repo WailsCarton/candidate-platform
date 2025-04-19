@@ -1,5 +1,6 @@
 'use client';
 
+import '@/i18n';
 import { useParams } from 'next/navigation';
 import { Card, Typography, Button } from 'antd';
 import { useTranslation } from 'react-i18next';
